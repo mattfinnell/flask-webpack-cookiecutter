@@ -4,8 +4,16 @@ Builds the skeleton of a tiny flask app with webpack. I have had to create this 
 ## Installation
 ```
 git clone https://github.com/mattfinnell/flask-webpack-cookiecutter <dirname>
+
 cd <dirname>
-sh setup.sh
+
+sh setup.sh # Just sets up the python virtualenv, grapbs dependencies, and runs a prod build
+```
+
+## Running
+```
+python3 wsgi.py # Starts flask server
+yarn start      # Starts webpack-dev-server
 ```
 
 ## Node scripts
@@ -20,7 +28,7 @@ Run a webpack production build
 yarn build
 ```
 
-Continuously run production builds, used for tuning `webpack.prod.js`
+Continuously run production builds for *exp*erimentation, used for fine tuning `webpack.prod.js`
 ```
-yarn start 
+yarn exp 
 ```
