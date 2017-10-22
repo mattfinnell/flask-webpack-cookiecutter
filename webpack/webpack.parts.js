@@ -1,3 +1,12 @@
+/* WEBPACK PARTS
+ *
+ * This module is a library of individual webpack features. 
+ *
+ * Having to hand code all of these into a webpack.prod.js or 
+ * webpack.dev.js will quickly make are * code look like the 
+ * following http://chriest.studio/images/callbackhell.jpg.
+ */
+
 const path = require('path');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
