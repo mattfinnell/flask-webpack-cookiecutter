@@ -9,6 +9,10 @@ import website.utils as utils
 
 
 def create_app(config):
+    """
+    Flask application factory, Development, Test, Staging, and Production
+    configs may engage / disengage different application features.
+    """
     # Create unconfigured flask application
     app = Flask(
         config.APP_NAME,
@@ -35,6 +39,9 @@ def create_app(config):
 
 
 def register_blueprints(app):
+    """
+    Will find all blueprints within website.views and update them to the app
+    """
     view_modules = map(import_string, find_modules("website.views"))
 
     for view_module in view_modules:
@@ -44,7 +51,6 @@ def register_blueprints(app):
         )
 
         for blueprint in blueprints:
-            print(blueprint)
             app.register_blueprint(blueprint)
 
 
