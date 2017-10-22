@@ -23,11 +23,11 @@ yarn build
 rm -rf LICENSE README.md setup.sh .git
 
 # [ GIT ] Add vitualenv directory and .env to .gitignore
-echo "# Python virtualenv"
-echo "$venvDir"$'\n' > .gitignore
+echo "# Python virtualenv stuff" > .gitignore
+echo "$venvDir"$ >> .gitignore
 echo ".env\n" >> .gitignore
 
-# [ GIT] Add python and node specific files to .gitignore
+# [ GIT ] Add python and node specific files to .gitignore
 curl https://raw.githubusercontent.com/github/gitignore/master/Python.gitignore >> .gitignore
 curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore >> .gitignore
 
