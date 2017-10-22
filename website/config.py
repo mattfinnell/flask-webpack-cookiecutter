@@ -6,6 +6,19 @@ class Config(object):
     DEBUG = True
 
     DEVELOPMENT = False
+    TESTING = False
+    STAGING = False
+    PRODUCTION = False
 
 class DevelopmentConfig(Config):
-    DEVELOPMENT = False
+    DEVELOPMENT = True
+
+class TestingConfig(Config):
+    DEVELOPMENT = True
+
+class StagingConfig(Config):
+    STAGING = True
+
+class ProductionConfig(Config):
+    PRODUCTION = True
+    DEBUG = False
