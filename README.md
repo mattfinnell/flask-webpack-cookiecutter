@@ -7,13 +7,16 @@ git clone https://github.com/mattfinnell/flask-webpack-cookiecutter <dirname>
 
 cd <dirname>
 
-sh setup.sh # Just sets up the python virtualenv, grapbs dependencies, and runs a prod build
+sh setup.sh 
 ```
 
 ## Running
 ```
-python3 wsgi.py # Starts flask server
-yarn start      # Starts webpack-dev-server
+# Start webpack-dev-server
+yarn start 
+
+# Start python flask server
+python3 wsgi.py 
 ```
 
 ## Node scripts
