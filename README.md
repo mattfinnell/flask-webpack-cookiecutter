@@ -42,7 +42,3 @@ Continuously run production builds for *exp*erimentation, used for fine tuning `
 ```
 yarn exp 
 ```
-
-[webpack]: https://cdn.iconscout.com/public/images/icon/free/png-128/webpack-logo-brand-development-tools-34ef036744ce5d4d-128x128.png "Webpack Module Bundler"
-
-[flask]: http://axisj.com/assets/images/sticker-flask.png "Flask Web Framework"
