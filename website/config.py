@@ -1,5 +1,6 @@
 import os
 
+
 class Config(object):
     APP_NAME = "TEST APPLICATION"
     STATIC_FOLDER = 'website/static'
@@ -10,14 +11,18 @@ class Config(object):
     STAGING = False
     PRODUCTION = False
 
+
 class DevelopmentConfig(Config):
     DEVELOPMENT = True
 
+
 class TestingConfig(Config):
-    DEVELOPMENT = True
+    TESTING = True
+
 
 class StagingConfig(Config):
     STAGING = True
+
 
 class ProductionConfig(Config):
     PRODUCTION = True

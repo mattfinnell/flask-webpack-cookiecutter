@@ -14,13 +14,15 @@ const common = require('./webpack.common');
 
 module.exports = merge([
   common,
-  devServer: { /* Silence some annoying dev-server output */
-    stats: {
-      children: false,
-      modules: false,
-    },
-    headers: { /* allow other applications use the dev-server endpoint */
-      'Access-Control-Allow-Origin': '*',
+  {
+    devServer: { /* Silence some annoying dev-server output */
+      stats: {
+        children: false,
+        modules: false,
+      },
+      headers: { /* allow other applications use the dev-server endpoint */
+        'Access-Control-Allow-Origin': '*',
+      },
     },
   },
 ]);

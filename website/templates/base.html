@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flask + Webpack | {% block title %}{% endblock %}</title>
+  {% if config.DEVELOPMENT %}
+    <!-- Webpack Dev Mode -->
+    <link rel="stylesheet" href="http://localhost:8080/static/build/css/app.css">
+  {% else %}
+    <!-- Static Build Mode -->
+    <link rel="stylesheet" href="/static/build/css/app.css">
+  {% endif %}
+</head>
+<body id="{% block body_id %}{% endblock %}" class="{% block body_classes %}{% endblock %}">
+  {% block content %}{% endblock %}
+  {% if config.DEVELOPMENT %}
+    <!-- Webpack Dev Mode -->
+    <script src="http://localhost:8080/static/build/js/app.bundle.js"></script>
+  {% else %}
+    <!-- Static Build Mode -->
+    <script src="/static/build/js/app.bundle.js"></script>
+  {% endif %}
+</body>
+</html>
+

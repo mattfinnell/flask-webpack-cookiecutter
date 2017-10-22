@@ -1,21 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Testy McTestface</title>
-  {% if config.DEVELOPMENT %}
-    <link rel="stylesheet" href="http://localhost:8080/static/build/css/app.css">
-  {% else %}
-    <link rel="stylesheet" href="/static/build/css/app.css">
-  {% endif %}
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
   <h1>Hello World</h1>
-  <p>Lorem ipsum sit dolor amet something something</p>
-  {% if config.DEVELOPMENT %}
-    <script src="http://localhost:8080/static/build/js/app.bundle.js"></script>
-  {% else %}
-    <script src="/static/build/js/app.bundle.js"></script>
-  {% endif %}
-</body>
-</html>
+  <p>Something something Lorem ipsum ...</p>
+{% endblock %}
