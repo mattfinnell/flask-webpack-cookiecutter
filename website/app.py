@@ -56,16 +56,10 @@ def register_blueprints(app):
 
 def register_error_pages(app):
     """
-    I handle all errors mentioned by the "Digital Ocean common http error codes"
-    webpage. All errors get stylized by the same errorpage jinja template, I
-    just pass the error name and error code so that the jinja template can
-    render around that.
+    Handle all errors mentioned by the "Digital Ocean common http error codes"
+    webpage. All errors get stylized by the same errorpage jinja template.
 
-    All error status can be found here ----> https://httpstatuses.com/
-    There's not a chance I will be implementing them all.
-
-    I should maybe find a better spot for these. Blueprinting them out doesn't
-    seem to work.
+    A list of HTTP statuses can be found at https://httpstatuses.com/
     """
     class Error(object):
         def __init__(self, error_code, error_title):
