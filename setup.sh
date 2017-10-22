@@ -19,3 +19,6 @@ yarn install
 
 # Run a webpack production build
 yarn build
+
+# Remove items specific to the scaffolding tool
+rm LICENSE README.md setup.sh
