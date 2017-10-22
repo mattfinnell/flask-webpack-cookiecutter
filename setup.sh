@@ -1,24 +1,35 @@
 #!/bin/bash
 
-# Setup python virtual env
 venvDir=".${PWD##*/}"
 currentPath=$PWD
 environmentActivation="$currentPath/$venvDir/bin/activate"
 
-# Create Python Virtual Environment
+# [ VIRTUALENV ] Create Python Virtual Environment
 python3 -m venv $venvDir
 
-# Set Environment Command to .env file for Autoenv
+# [ VIRTUALENV ] Set Environment Command to .env file for Autoenv
 echo "source $environmentActivation" > .env 
 
-# Install python dependencies (Flask and friends)
+# [ PYTHON ] install python flask and friends
 pip install -r requirements.txt
 
-# Install node dependencies (Webpack and friends)
+# [ NODE ] install webpack and friends
 yarn install
 
-# Run a webpack production build
+# [ NODE ] Run a webpack production build
 yarn build
 
-# Remove items specific to the scaffolding tool
-rm LICENSE README.md setup.sh
+# [ CLEANUP ]
+rm -rf LICENSE README.md setup.sh .git
+
+# [ GIT ] Add vitualenv directory and .env to .gitignore
+echo "# Python virtualenv"
+echo "$venvDir"$'\n' > .gitignore
+echo ".env\n" >> .gitignore
+
+# [ GIT] Add python and node specific files to .gitignore
+curl https://raw.githubusercontent.com/github/gitignore/master/Python.gitignore >> .gitignore
+curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore >> .gitignore
+
+# [ GIT ] Initialize git repository
+git init
