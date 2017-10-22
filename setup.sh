@@ -33,3 +33,6 @@ curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore >>
 
 # [ GIT ] Initialize git repository
 git init
+
+# [ Virtualenv ] Init virtualenv
+cd .

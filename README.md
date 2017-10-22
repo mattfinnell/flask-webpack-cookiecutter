@@ -1,5 +1,11 @@
 # flask-webpack cookiecutter
-Builds the skeleton of a tiny flask app with webpack. I have had to create this structure by hand so many times when debugging and testing features, I finally decided to make a tool that builds it all for me so that I can move on with fixing things.
+Builds the skeleton of a tiny flask+webpack app.
+
+- automatically constructs application skeleton
+- automatically builds python-flask dependencies
+- automatically builds node-webpack dependencies
+- automatically sets up a fresh virtualenv environment
+- automatically sets up a fresh git repository
 
 ## Installation
 ```
