@@ -3,6 +3,7 @@ Builds the skeleton of a tiny flask app with webpack. I have had to create this 
 
 ## Installation
 ```
-git clone https://github.com/mattfinnell/flask-webpack-cookiecutter
+git clone https://github.com/mattfinnell/flask-webpack-cookiecutter <dirname>
+cd <dirname>
 sh setup.sh
 ```
