@@ -19,8 +19,3 @@ def register_routes(app):
         return render_template('index.html')
 
     return app
-
-if __name__ == "__main__" :
-    app = create_app(config.DevelopmentConfig)
-
-    app.run()
