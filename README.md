@@ -7,3 +7,20 @@ git clone https://github.com/mattfinnell/flask-webpack-cookiecutter <dirname>
 cd <dirname>
 sh setup.sh
 ```
+
+## Node scripts
+
+Run webpack-dev-server
+```
+yarn start 
+```
+
+Run a webpack production build
+```
+yarn build
+```
+
+Continuously run production builds, used for tuning `webpack.prod.js`
+```
+yarn start 
+```

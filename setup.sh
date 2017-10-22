@@ -16,3 +16,6 @@ pip install -r requirements.txt
 
 # Install node dependencies (Webpack and friends)
 yarn install
+
+# Run a webpack production build
+yarn build
