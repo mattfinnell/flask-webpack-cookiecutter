@@ -7,8 +7,9 @@ environmentActivation="$currentPath/$venvDir/bin/activate"
 # [ VIRTUALENV ] Create Python Virtual Environment
 python3 -m venv $venvDir
 
-# [ VIRTUALENV ] Set Environment Command to .env file for Autoenv
-echo "source $environmentActivation" > .env 
+# [ VIRTUALENV ] Set Application Environment Variables to .env file for Autoenv
+echo "source $environmentActivation\n" > .env
+echo "export FLASK_APP_CONFIG=\"config.DevelopmentConfig\"" >> .env
 
 # [ PYTHON ] install python flask and friends
 pip install -r requirements.txt
