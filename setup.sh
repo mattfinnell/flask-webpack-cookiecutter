@@ -8,17 +8,18 @@ environmentActivation="$currentPath/$venvDir/bin/activate"
 python3 -m venv $venvDir
 
 # [ VIRTUALENV ] Set Application Environment Variables to .env file for Autoenv
-echo "source $environmentActivation\n" > .env
+echo "source $environmentActivation" > .env
 echo "export FLASK_APP_CONFIG=\"config.DevelopmentConfig\"" >> .env
+
+# [ VIRTUALENV ] Activate python virtual environment
+export FLASK_APP_CONFIG="config.DevelopmentConfig"
+source $environmentActivation
 
 # [ PYTHON ] install python flask and friends
 pip install -r requirements.txt
 
 # [ NODE ] install webpack and friends
 yarn install
-
-# [ NODE ] Run a webpack production build
-yarn build
 
 # [ CLEANUP ]
 rm -rf LICENSE README.md setup.sh .git
@@ -35,5 +36,5 @@ curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore >>
 # [ GIT ] Initialize git repository
 git init
 
-# [ Virtualenv ] Init virtualenv
-cd .
+# [ NODE ] Run a webpack production build
+yarn build

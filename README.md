@@ -10,6 +10,17 @@ Builds the skeleton of a flask+webpack app.
 - automatically sets up a fresh virtualenv environment
 - automatically sets up a fresh git repository
 
+Just run the following 4 commands and then open a browser to `localhost:5000`, simple as that!
+```
+git clone https://github.com/mattfinnell/flask-webpack-cookiecutter <dirname>
+
+cd <dirname>
+
+source setup.sh
+
+python wsgi.py
+```
+
 Was immediately featured as an *Interesting Project* in the [Python Weekly Newsletter!](http://mailchi.mp/pythonweekly/python-weekly-issue-318?e=99f5ef4e2f).
 
 ## Installation
@@ -18,7 +29,7 @@ git clone https://github.com/mattfinnell/flask-webpack-cookiecutter <dirname>
 
 cd <dirname>
 
-sh setup.sh
+source setup.sh
 ```
 
 This project assumes that you have the following usual suspects already installed
